@@ -3,7 +3,10 @@ var computer_pattern = [];
 var user_pattern = [];
 var start = false;
 var level = 0;
-
+function randomPattern() {
+    user_pattern = [];
+    
+}
 document.addEventListener("keypress", function () {
   if (!start) {
     document.querySelector("h1").textContent = "Level 0";

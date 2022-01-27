@@ -6,8 +6,8 @@ var level = 0;
 
 function randomPattern() {
   user_pattern = [];
-  var randomNumber = Math.floor(Math.random() * 4);
-  var random_color_picked = btn_colors[randomNumber];
+  var random_number = Math.floor(Math.random() * 4);
+  var random_color_picked = btn_colors[random_number];
   computer_pattern.push(random_color_picked);
   $("." + random_color_picked)
     .fadeIn(100)
@@ -40,15 +40,15 @@ function playSound(name) {
   audio.play();
 }
 
-function animatePressBtn(currentColour) {
-  $("#" + currentColour).addClass("pressed");
+function animatePressBtn(current_color) {
+  $("#" + current_color).addClass("pressed");
   setTimeout(function () {
-    $("#" + currentColour).removeClass("pressed");
+    $("#" + current_color).removeClass("pressed");
   }, 100);
 }
 
-function validatePatterns(currentLevel) {
-  if (computer_pattern[currentLevel] === user_pattern[currentLevel]) {
+function validatePatterns(current_level) {
+  if (computer_pattern[current_level] === user_pattern[current_level]) {
     console.log("Success");
     if (user_pattern.length === computer_pattern.length) {
       setTimeout(function () {
